@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mina Magdy — Portfolio</title>
+  <meta name="description" content="Portfolio of Mina Magdy, Senior Graphic Designer specializing in branding, social media, and digital art." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --panel: #12141a;
+      --text: #e7e9ee;
+      --muted: #a7acb8;
+      --accent: #8b5cf6;
+      --ring: rgba(139, 92, 246, .35);
+      --card: #161922;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#fbfcfe; --panel:#ffffff; --text:#0f1115; --muted:#5a6270; --accent:#6d28d9; --ring:rgba(109,40,217,.20); --card:#ffffff; --border:rgba(0,0,0,0.08); }
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1200px 700px at 80% -10%, rgba(139,92,246,.08), transparent 60%), var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1200px,92vw);margin:0 auto}
+    header{position:sticky;top:0;z-index:40;backdrop-filter:saturate(150%) blur(10px);background:linear-gradient(180deg, rgba(18,20,26,.85), rgba(18,20,26,.55));border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px var(--ring)}
+    .links{display:flex;gap:20px;font-weight:600}
+    .hero{padding:72px 0 36px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    @media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:40px}}
+    .headline{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin:0 0 12px}
+    .sub{font-size:clamp(1rem,2.3vw,1.125rem);color:var(--muted);margin:0 0 22px}
+    .taglist{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--card));padding:8px 12px;border-radius:999px;font-weight:600;font-size:.9rem;color:var(--muted)}
+    .cta{margin-top:26px;display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid var(--border);background:linear-gradient(180deg,var(--card),var(--panel));transition:transform .08s ease,box-shadow .2s ease,border-color .2s ease}
+    .btn.primary{background:linear-gradient(180deg,var(--accent),#6d28d9);color:white;border-color:transparent}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--ring)}
+    .portrait{border:1px solid var(--border);background:var(--panel);aspect-ratio:4/5;border-radius:20px;position:relative;overflow:hidden;display:grid;place-items:center}
+    .portrait .initials{font-size:clamp(3rem,10vw,6rem);font-weight:800;opacity:.2}
+    .section{padding:44px 0 12px;}
+    .section h2{margin:0 0 10px;font-size:clamp(1.4rem,4vw,1.8rem)}
+    .section p{margin:6px 0 20px;color:var(--muted);max-width:65ch}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:transform .12s ease,box-shadow .2s ease;display:flex;flex-direction:column}
+    .card:hover{transform:translateY(-2px);box-shadow:0 20px 50px -20px var(--ring)}
+    .thumb{width:100%;height:200px;object-fit:cover;display:block;background:#222733}
+    .meta{display:flex;align-items:center;justify-content:space-between;padding:14px}
+    .meta h3{margin:0;font-size:1rem}
+    .meta .pill{font-size:.85rem;color:var(--muted);border:1px dashed var(--border);padding:6px 10px;border-radius:999px}
+    .about{columns:2 320px;column-gap:28px;color:var(--muted)}
+    .about p{margin:0 0 14px}
+    footer{padding:36px 0 80px;color:var(--muted);display:grid;gap:10px}
+    .social{display:flex;gap:16px;flex-wrap:wrap}
+    .social a{border:1px solid var(--border);padding:8px 12px;border-radius:999px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> <span>Mina M. Bashir</span></div>
+      <nav class="links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="headline">Senior Graphic Designer with 7+ years of experience.</h1>
+        <p class="sub">Specialized in branding, social media design, packaging, and digital art. Based in Cairo, Egypt. Available for freelance & collaborations.</p>
+        <div class="taglist">
+          <span class="tag">Branding</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Packaging</span>
+          <span class="tag">Digital Art</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#work">View Work</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="portrait" aria-hidden="true"><div class="initials">MB</div></div>
+    </section>
+
+    <section id="work" class="section">
+      <h2>Selected Work</h2>
+      <p>A showcase of my best designs from Behance.</p>
+      <div class="grid">
+        <article class="card">
+          <img class="thumb" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://images.weserv.nl/?url=mir-s3-cdn-cf.behance.net/project_modules/disp/1157747256054.6054add0a6adc.jpg" alt="911 GT2RS vector illustration" />
+          <div class="meta"><h3>911 GT2RS Illustration</h3><span class="pill">Illustration</span></div>
+        </article>
+        <article class="card">
+          <img class="thumb" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://images.weserv.nl/?url=mir-s3-cdn-cf.behance.net/project_modules/disp/3acb86103999461.5f5936ea5823f.jpg" alt="Alexandria Academy Rebranding" />
+          <div class="meta"><h3>Alexandria Academy Rebranding</h3><span class="pill">Brand Identity</span></div>
+        </article>
+        <article class="card">
+          <img class="thumb" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://images.weserv.nl/?url=mir-s3-cdn-cf.behance.net/project_modules/disp/73372d104650555.5f68cd4259a76.jpg" alt="BVB Rebranding" />
+          <div class="meta"><h3>BVB Rebranding</h3><span class="pill">Sports Branding</span></div>
+        </article>
+        <article class="card">
+          <img class="thumb" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://images.weserv.nl/?url=mir-s3-cdn-cf.behance.net/project_modules/disp/d3f82f177340985.64c9276405829.png" alt="Digital Art Poster" />
+          <div class="meta"><h3>Digital Art Poster</h3><span class="pill">Digital Art</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>I’m Mina Magdy, 26 years old, a Senior Graphic Designer with 7 years of experience. Graduated from Ain Shams University, Faculty of Commerce, Administration Department in 2020. Passionate about branding, social media campaigns, packaging, and digital art. Experienced with Adobe Photoshop, Illustrator, InDesign, Premiere, XD, and Blender.</p>
+    </section>
+
+    <div class="about container">
+      <p><strong>Current Role:</strong> Graphic Designer at National Care Company.</p>
+      <p><strong>Previous Roles:</strong> National Wolf Company, Seven Cats, Soliter.</p>
+      <p><strong>Freelance:</strong> Active on Upwork, Fiverr, Khamsat, Mostaql, and more.</p>
+      <p><strong>Certificates:</strong> Google UX Design, CalARTS Graphic Design, Coursera.</p>
+    </div>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Available for freelance and collaborations. Reach me via email, phone, or social media.</p>
+    </section>
+
+    <footer class="container">
+      <div class="social">
+        <a href="https://wa.me/201559466822">WhatsApp</a>
+        <a href="https://www.behance.net/minamagdy5555">Behance</a>
+        <a href="https://www.linkedin.com/in/mina-m-bashir-040419183/">LinkedIn</a>
+        <a href="https://instagram.com/mina_m._bashir">Instagram</a>
+        <a href="https://www.facebook.com/ooo10ooo20">Facebook</a>
+        <span>📍 Cairo, Egypt • ☎︎ +20 155 946 6822</span>
+      </div>
+      <small>© <span id="year"></span> Mina Magdy. All rights reserved.</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
